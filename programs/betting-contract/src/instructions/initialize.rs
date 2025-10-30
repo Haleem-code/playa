@@ -3,9 +3,8 @@ use crate::state::*;
 use crate::error::BettingError;
 
 #[derive(Accounts)]
-#[instruction(stream_id: String, betting_deadline: i64)]
+#[instruction(stream_id: String, betting_deadline: i64, moderator_pubkey: Pubkey)]
 pub struct Initialize<'info> {
-    /// The betting pool account being created
     #[account(
         init,
         payer = admin,
@@ -14,17 +13,13 @@ pub struct Initialize<'info> {
         bump
     )]
     pub betting_pool: Account<'info, BettingPool>,
-    
-    /// The admin who is creating this betting pool
-    /// This will be validated against hardcoded admin pubkey
     #[account(mut)]
     pub admin: Signer<'info>,
-    
-    /// System program for creating accounts
+    /// The moderator is not required as a signer, just passed as a pubkey argument
     pub system_program: Program<'info, System>,
 }
 
-pub fn handler(ctx: Context<Initialize>, stream_id: String, betting_deadline: i64) -> Result<()> {
+pub fn handler(ctx: Context<Initialize>, stream_id: String, betting_deadline: i64, moderator_pubkey: Pubkey) -> Result<()> {
     // Validate stream ID length
     if stream_id.len() > 32 {
         return Err(BettingError::StreamIdTooLong.into());
@@ -44,6 +39,7 @@ pub fn handler(ctx: Context<Initialize>, stream_id: String, betting_deadline: i6
     
     // Initialize betting pool with your specifications
     betting_pool.admin = admin_key;
+    betting_pool.moderator = moderator_pubkey;
     betting_pool.stream_id = stream_id.clone();
     betting_pool.total_pool = 0;
     betting_pool.player1_bets = 0;

@@ -2,68 +2,43 @@ use anchor_lang::prelude::*;
 
 #[account]
 pub struct BettingPool {
- 
     pub admin: Pubkey,
-    
-    
+    pub moderator: Pubkey, // NEW: Public key of the designated moderator
     pub stream_id: String,
-    
-   
     pub total_pool: u64,
-    
-  
     pub player1_bets: u64,
-  
     pub player2_bets: u64,
-    
- 
     pub player1_bet_count: u32,
-    
-   
     pub player2_bet_count: u32,
-    
-   
     pub winner_declared: bool,
-    
-    
     pub winning_outcome: u8,
-
-    
     pub betting_deadline: i64,
-    
-    /// Creator fee rate in basis points (250 = 2.5%)
     pub creator_fee_rate: u16,
-    
-    /// Platform fee rate in basis points (250 = 2.5%)
     pub platform_fee_rate: u16,
-    
-   
     pub is_payout_complete: bool,
-    
- 
     pub created_at: i64,
-    
     pub bump: u8,
 }
 
 impl BettingPool {
    
-    pub const LEN: usize = 8 + 
-        32 +  
-        4 + 32 + 
-        8 +   
-        8 +   
-        8 +   
-        4 +  
-        4 +   
-        1 +   
-        1 +   
-        8 +  
-        2 +   
-        2 +   
-        1 +   
-        8 +   
-        1;    
+    pub const LEN: usize = 8 +
+        32 + // admin
+        32 + // moderator
+        4 + 32 + // stream_id (max 32 chars)
+        8 + // total_pool
+        8 + // player1_bets
+        8 + // player2_bets
+        4 + // player1_bet_count
+        4 + // player2_bet_count
+        1 + // winner_declared
+        1 + // winning_outcome
+        8 + // betting_deadline
+        2 + // creator_fee_rate
+        2 + // platform_fee_rate
+        1 + // is_payout_complete
+        8 + // created_at
+        1; // bump
 
     pub fn is_betting_open(&self) -> bool {
         let now = Clock::get().unwrap().unix_timestamp;

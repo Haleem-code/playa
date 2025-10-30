@@ -1,0 +1,2165 @@
+WARNING: `anchor-lang` version(0.31.1) and the current CLI version(0.32.0) don't match.
+
+	This can lead to unwanted behavior. To use the same CLI version, add:
+
+	[toolchain]
+	anchor_version = "0.31.1"
+
+	to Anchor.toml
+
+WARNING: `@coral-xyz/anchor` version(^0.31.1) and the current CLI version(0.32.0) don't match.
+
+	This can lead to unwanted behavior. To fix, upgrade the package by running:
+
+	yarn upgrade @coral-xyz/anchor@0.32.0
+
+[2025-10-27T09:24:21.361778585Z INFO  cargo_build_sbf::utils] spawn: "/root/.cache/solana/v1.48/platform-tools/rust/bin/rustc" --version
+[2025-10-27T09:24:21.635812503Z WARN  cargo_build_sbf] Package 'betting-contract' has two crate types defined: cdylib and lib. This setting precludes link-time optimizations (LTO). Use cdylib for programs to be deployed and rlib for packages to be imported by other programs as libraries.
+[2025-10-27T09:24:21.637427245Z INFO  cargo_build_sbf::utils] spawn: "rustup" toolchain list -v
+[2025-10-27T09:24:21.687015299Z INFO  cargo_build_sbf] Solana SDK: /root/.local/share/solana/install/releases/stable-5466f4592b1983adb13ba0a5d53f41ea2de69fba/solana-release/bin/platform-tools-sdk/sbf
+[2025-10-27T09:24:21.687232895Z INFO  cargo_build_sbf::utils] spawn: "cargo" +solana build --release --target sbpf-solana-solana
+   Compiling proc-macro2 v1.0.101
+   Compiling unicode-ident v1.0.19
+   Compiling version_check v0.9.5
+   Compiling serde_core v1.0.223
+   Compiling serde v1.0.223
+   Compiling typenum v1.18.0
+   Compiling syn v1.0.109
+   Compiling hashbrown v0.15.5
+   Compiling equivalent v1.0.2
+   Compiling winnow v0.7.13
+   Compiling toml_datetime v0.6.11
+   Compiling generic-array v0.14.7
+   Compiling cfg-if v1.0.3
+   Compiling cfg_aliases v0.2.1
+   Compiling borsh v1.5.7
+   Compiling autocfg v1.5.0
+   Compiling indexmap v2.11.1
+   Compiling once_cell v1.21.3
+   Compiling quote v1.0.40
+   Compiling syn v2.0.106
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.6
+   Compiling solana-define-syscall v2.3.0
+   Compiling subtle v2.6.1
+   Compiling five8_core v0.1.2
+   Compiling zerocopy v0.8.27
+   Compiling digest v0.10.7
+   Compiling toml_edit v0.22.27
+   Compiling ahash v0.8.12
+   Compiling five8 v0.2.1
+   Compiling bytemuck v1.23.2
+   Compiling solana-sanitize v2.2.1
+   Compiling solana-atomic-u64 v2.2.1
+   Compiling num-traits v0.2.19
+   Compiling sha2 v0.10.9
+   Compiling five8_const v0.1.4
+   Compiling bs58 v0.5.1
+   Compiling anyhow v1.0.99
+   Compiling thiserror v1.0.69
+   Compiling serde_json v1.0.145
+   Compiling proc-macro-crate v3.3.0
+   Compiling solana-decode-error v2.3.0
+   Compiling solana-msg v2.2.1
+   Compiling ryu v1.0.20
+   Compiling itoa v1.0.15
+   Compiling unicode-segmentation v1.12.0
+   Compiling memchr v2.7.5
+   Compiling cpufeatures v0.2.17
+   Compiling heck v0.3.3
+   Compiling hashbrown v0.13.2
+   Compiling solana-program-memory v2.3.1
+   Compiling find-msvc-tools v0.1.1
+   Compiling shlex v1.3.0
+   Compiling feature-probe v0.1.1
+   Compiling serde_bytes v0.11.18
+   Compiling cc v1.2.37
+   Compiling bv v0.11.1
+   Compiling log v0.4.28
+   Compiling thiserror v2.0.16
+   Compiling constant_time_eq v0.3.1
+   Compiling arrayref v0.3.9
+   Compiling arrayvec v0.7.6
+   Compiling borsh-derive-internal v0.10.4
+   Compiling borsh-schema-derive-internal v0.10.4
+   Compiling memoffset v0.9.1
+   Compiling lazy_static v1.5.0
+   Compiling keccak v0.1.5
+   Compiling sha3 v0.10.8
+   Compiling solana-big-mod-exp v2.2.1
+   Compiling getrandom v0.2.16
+   Compiling solana-native-token v2.3.0
+   Compiling solana-program-option v2.2.1
+   Compiling base64 v0.21.7
+   Compiling blake3 v1.8.2
+   Compiling serde_derive v1.0.223
+   Compiling borsh-derive v1.5.7
+   Compiling bytemuck_derive v1.10.1
+   Compiling solana-sdk-macro v2.2.1
+   Compiling thiserror-impl v1.0.69
+   Compiling thiserror-impl v2.0.16
+   Compiling num-derive v0.4.2
+   Compiling anchor-derive-space v0.31.1
+   Compiling solana-secp256k1-recover v2.2.1
+   Compiling solana-hash v2.3.0
+   Compiling bincode v1.3.3
+   Compiling solana-fee-calculator v2.2.1
+   Compiling solana-short-vec v2.2.1
+   Compiling solana-serde-varint v2.2.2
+   Compiling toml v0.5.11
+   Compiling anchor-syn v0.31.1
+   Compiling solana-sha256-hasher v2.3.0
+   Compiling anchor-lang-idl-spec v0.1.0
+   Compiling solana-blake3-hasher v2.2.1
+   Compiling solana-keccak-hasher v2.2.1
+   Compiling anchor-lang-idl v0.1.2
+   Compiling proc-macro-crate v0.1.5
+   Compiling borsh-derive v0.10.4
+   Compiling borsh v0.10.4
+   Compiling solana-pubkey v2.4.0
+   Compiling solana-borsh v2.2.1
+   Compiling solana-instruction v2.3.0
+   Compiling solana-sdk-ids v2.2.1
+   Compiling solana-nonce v2.2.1
+   Compiling solana-sysvar-id v2.2.1
+   Compiling solana-clock v2.2.2
+   Compiling solana-rent v2.2.1
+   Compiling solana-slot-hashes v2.2.1
+   Compiling solana-last-restart-slot v2.2.1
+   Compiling solana-program-error v2.2.2
+   Compiling solana-system-interface v1.0.0
+   Compiling solana-serialize-utils v2.2.1
+   Compiling solana-stable-layout v2.2.1
+   Compiling solana-transaction-error v2.2.1
+   Compiling solana-bincode v2.2.1
+   Compiling solana-account-info v2.3.0
+   Compiling solana-epoch-rewards v2.2.1
+   Compiling solana-slot-history v2.2.1
+   Compiling solana-epoch-schedule v2.2.1
+   Compiling solana-program-pack v2.2.1
+   Compiling solana-cpi v2.2.1
+   Compiling solana-instructions-sysvar v2.2.2
+   Compiling solana-account v2.2.1
+   Compiling solana-program-entrypoint v2.3.0
+   Compiling solana-address-lookup-table-interface v2.2.2
+   Compiling solana-loader-v2-interface v2.2.1
+   Compiling solana-stake-interface v1.2.1
+   Compiling solana-feature-gate-interface v2.2.2
+   Compiling solana-message v2.4.0
+   Compiling solana-loader-v3-interface v5.0.0
+   Compiling solana-vote-interface v2.2.6
+   Compiling solana-loader-v4-interface v2.2.1
+   Compiling solana-sysvar v2.3.0
+   Compiling solana-program v2.3.0
+   Compiling anchor-attribute-error v0.31.1
+   Compiling anchor-attribute-access-control v0.31.1
+   Compiling anchor-attribute-account v0.31.1
+   Compiling anchor-attribute-constant v0.31.1
+   Compiling anchor-attribute-event v0.31.1
+   Compiling anchor-derive-accounts v0.31.1
+   Compiling anchor-derive-serde v0.31.1
+   Compiling anchor-attribute-program v0.31.1
+   Compiling anchor-lang v0.31.1
+   Compiling betting-contract v0.1.0 (/root/betting-contract/betting-contract/programs/betting-contract)
+warning: unexpected `cfg` condition value: `custom-heap`
+  --> programs/betting-contract/src/lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+   = help: consider adding `custom-heap` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: `#[warn(unexpected_cfgs)]` on by default
+   = note: this warning originates in the macro `$crate::custom_heap_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `custom-panic`
+  --> programs/betting-contract/src/lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+   = help: consider adding `custom-panic` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the macro `$crate::custom_panic_default` which comes from the expansion of the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/betting-contract/src/instructions/initialize.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+  = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/betting-contract/src/instructions/place_bet.rs:6:10
+  |
+6 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+  = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/betting-contract/src/instructions/declare_winner.rs:7:10
+  |
+7 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+  = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/betting-contract/src/instructions/payout_winners.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+  = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/betting-contract/src/instructions/payout_creator.rs:5:10
+  |
+5 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+  = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+ --> programs/betting-contract/src/instructions/payout_platform.rs:6:10
+  |
+6 | #[derive(Accounts)]
+  |          ^^^^^^^^
+  |
+  = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+  = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+  = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+  = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: ambiguous glob re-exports
+  --> programs/betting-contract/src/lib.rs:8:9
+   |
+8  | pub use instructions::initialize::*;
+   |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^ the name `handler` in the value namespace is first re-exported here
+...
+13 | pub use instructions::payout_platform::*;
+   |         -------------------------------- but the name `handler` in the value namespace is also re-exported here
+   |
+   = note: `#[warn(ambiguous_glob_reexports)]` on by default
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/betting-contract/src/lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+   = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: unexpected `cfg` condition value: `anchor-debug`
+  --> programs/betting-contract/src/lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: expected values for `feature` are: `cpi`, `default`, `idl-build`, `no-entrypoint`, `no-idl`, and `no-log-ix-name`
+   = help: consider adding `anchor-debug` as a feature in `Cargo.toml`
+   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration
+   = note: this warning originates in the derive macro `Accounts` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: use of deprecated method `anchor_lang::prelude::AccountInfo::<'a>::realloc`: Use AccountInfo::resize() instead
+  --> programs/betting-contract/src/lib.rs:17:1
+   |
+17 | #[program]
+   | ^^^^^^^^^^
+   |
+   = note: `#[warn(deprecated)]` on by default
+   = note: this warning originates in the attribute macro `program` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: `betting-contract` (lib) generated 17 warnings (5 duplicates)
+    Finished `release` profile [optimized] target(s) in 2m 29s
+[2025-10-27T09:26:46.088554675Z INFO  cargo_build_sbf::utils] spawn: "/root/.local/share/solana/install/releases/stable-5466f4592b1983adb13ba0a5d53f41ea2de69fba/solana-release/bin/platform-tools-sdk/sbf/scripts/strip.sh" /root/betting-contract/betting-contract/target/sbpf-solana-solana/release/betting_contract.so /root/betting-contract/betting-contract/target/deploy/betting_contract.so
+[2025-10-27T09:26:46.137253677Z INFO  cargo_build_sbf::utils] spawn: "/root/.local/share/solana/install/releases/stable-5466f4592b1983adb13ba0a5d53f41ea2de69fba/solana-release/bin/platform-tools-sdk/sbf/dependencies/platform-tools/llvm/bin/llvm-readelf" --dyn-symbols /root/betting-contract/betting-contract/target/deploy/betting_contract.so
+[2025-10-27T09:26:46.161541559Z WARN  cargo_build_sbf::post_processing] The following functions are undefined and not known syscalls ["abort", "sol_log_", "sol_memcpy_", "sol_log_data", "sol_get_clock_sysvar", "sol_get_rent_sysvar", "sol_invoke_signed_rust", "sol_memset_", "sol_try_find_program_address", "sol_create_program_address", "sol_log_pubkey", "sol_sha256", "sol_memcmp_"].
+[2025-10-27T09:26:46.161572906Z WARN  cargo_build_sbf::post_processing]          Calling them will trigger a run-time error.
+[2025-10-27T09:26:46.161583016Z INFO  cargo_build_sbf::post_processing] To deploy this program:
+[2025-10-27T09:26:46.161583936Z INFO  cargo_build_sbf::post_processing]   $ solana program deploy /root/betting-contract/betting-contract/target/deploy/betting_contract.so
+[2025-10-27T09:26:46.161585343Z INFO  cargo_build_sbf::post_processing] The program address will default to this keypair (override with --program-id):
+[2025-10-27T09:26:46.161586016Z INFO  cargo_build_sbf::post_processing]   /root/betting-contract/betting-contract/target/deploy/betting_contract-keypair.json
+   Compiling proc-macro2 v1.0.101
+   Compiling unicode-ident v1.0.19
+   Compiling version_check v0.9.5
+   Compiling serde_core v1.0.223
+   Compiling serde v1.0.223
+   Compiling typenum v1.18.0
+   Compiling cfg-if v1.0.3
+   Compiling hashbrown v0.15.5
+   Compiling equivalent v1.0.2
+   Compiling toml_write v0.1.2
+   Compiling winnow v0.7.13
+   Compiling cpufeatures v0.2.17
+   Compiling generic-array v0.14.7
+   Compiling syn v1.0.109
+   Compiling subtle v2.6.1
+   Compiling libc v0.2.175
+   Compiling zerocopy v0.8.27
+   Compiling autocfg v1.5.0
+   Compiling indexmap v2.11.1
+   Compiling quote v1.0.40
+   Compiling syn v2.0.106
+   Compiling cfg_aliases v0.2.1
+   Compiling borsh v1.5.7
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.6
+   Compiling digest v0.10.7
+   Compiling once_cell v1.21.3
+   Compiling num-traits v0.2.19
+   Compiling five8_core v0.1.2
+   Compiling ahash v0.8.12
+   Compiling five8 v0.2.1
+   Compiling getrandom v0.2.16
+   Compiling solana-sanitize v2.2.1
+   Compiling bytemuck v1.23.2
+   Compiling solana-atomic-u64 v2.2.1
+   Compiling semver v1.0.27
+   Compiling rand_core v0.6.4
+   Compiling sha2 v0.10.9
+   Compiling rustc_version v0.4.1
+   Compiling zeroize v1.8.1
+   Compiling five8_const v0.1.4
+   Compiling bs58 v0.5.1
+   Compiling solana-decode-error v2.3.0
+   Compiling curve25519-dalek v4.1.3
+   Compiling memchr v2.7.5
+   Compiling anyhow v1.0.99
+   Compiling hashbrown v0.13.2
+   Compiling serde_json v1.0.145
+   Compiling ryu v1.0.20
+   Compiling itoa v1.0.15
+   Compiling unicode-segmentation v1.12.0
+   Compiling crunchy v0.2.4
+   Compiling thiserror v1.0.69
+   Compiling solana-msg v2.2.1
+   Compiling heck v0.3.3
+   Compiling solana-program-memory v2.3.1
+   Compiling digest v0.9.0
+   Compiling getrandom v0.1.16
+   Compiling shlex v1.3.0
+   Compiling find-msvc-tools v0.1.1
+   Compiling libsecp256k1-core v0.2.2
+   Compiling cc v1.2.37
+   Compiling ppv-lite86 v0.2.21
+   Compiling arrayref v0.3.9
+   Compiling feature-probe v0.1.1
+   Compiling bv v0.11.1
+   Compiling rand_core v0.5.1
+   Compiling constant_time_eq v0.3.1
+   Compiling log v0.4.28
+   Compiling arrayvec v0.7.6
+   Compiling thiserror v2.0.16
+   Compiling libsecp256k1-gen-ecmult v0.2.1
+   Compiling libsecp256k1-gen-genmult v0.2.1
+   Compiling rand_chacha v0.2.2
+   Compiling libsecp256k1 v0.6.0
+   Compiling serde_bytes v0.11.18
+   Compiling block-buffer v0.9.0
+   Compiling lazy_static v1.5.0
+   Compiling keccak v0.1.5
+   Compiling opaque-debug v0.3.1
+   Compiling sha2 v0.9.9
+   Compiling sha3 v0.10.8
+   Compiling borsh-derive-internal v0.10.4
+   Compiling borsh-schema-derive-internal v0.10.4
+   Compiling rand v0.7.3
+   Compiling aho-corasick v1.1.3
+   Compiling num-integer v0.1.46
+   Compiling blake3 v1.8.2
+   Compiling memoffset v0.9.1
+   Compiling serde_derive v1.0.223
+   Compiling bytemuck_derive v1.10.1
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling solana-sdk-macro v2.2.1
+   Compiling thiserror-impl v1.0.69
+   Compiling thiserror-impl v2.0.16
+   Compiling base64 v0.12.3
+   Compiling bitflags v2.9.4
+   Compiling regex-syntax v0.8.6
+   Compiling num-derive v0.4.2
+   Compiling num-bigint v0.4.6
+   Compiling rand_chacha v0.3.1
+   Compiling base64 v0.22.1
+   Compiling rand v0.8.5
+   Compiling solana-program-option v2.2.1
+   Compiling solana-native-token v2.3.0
+   Compiling anchor-derive-space v0.31.1
+   Compiling base64 v0.21.7
+   Compiling solana-big-mod-exp v2.2.1
+   Compiling regex-automata v0.4.10
+   Compiling toml_datetime v0.6.11
+   Compiling serde_spanned v0.6.9
+   Compiling toml v0.5.11
+   Compiling bincode v1.3.3
+   Compiling solana-short-vec v2.2.1
+   Compiling solana-fee-calculator v2.2.1
+   Compiling anchor-lang-idl-spec v0.1.0
+   Compiling solana-serde-varint v2.2.2
+   Compiling toml_edit v0.22.27
+   Compiling proc-macro-crate v0.1.5
+   Compiling anchor-lang-idl v0.1.2
+   Compiling borsh-derive v0.10.4
+   Compiling borsh v0.10.4
+   Compiling regex v1.11.2
+   Compiling proc-macro-crate v3.3.0
+   Compiling toml v0.8.23
+   Compiling cargo_toml v0.19.2
+   Compiling solana-secp256k1-recover v2.2.1
+   Compiling borsh-derive v1.5.7
+   Compiling anchor-syn v0.31.1
+   Compiling solana-hash v2.3.0
+   Compiling solana-borsh v2.2.1
+   Compiling solana-sha256-hasher v2.3.0
+   Compiling solana-keccak-hasher v2.2.1
+   Compiling solana-blake3-hasher v2.2.1
+   Compiling solana-pubkey v2.4.0
+   Compiling solana-instruction v2.3.0
+   Compiling solana-sdk-ids v2.2.1
+   Compiling solana-nonce v2.2.1
+   Compiling solana-sysvar-id v2.2.1
+   Compiling solana-clock v2.2.2
+   Compiling solana-rent v2.2.1
+   Compiling solana-slot-hashes v2.2.1
+   Compiling solana-epoch-rewards v2.2.1
+   Compiling solana-epoch-schedule v2.2.1
+   Compiling solana-slot-history v2.2.1
+   Compiling solana-program-error v2.2.2
+   Compiling solana-system-interface v1.0.0
+   Compiling solana-serialize-utils v2.2.1
+   Compiling solana-bincode v2.2.1
+   Compiling solana-transaction-error v2.2.1
+   Compiling solana-address-lookup-table-interface v2.2.2
+   Compiling solana-last-restart-slot v2.2.1
+   Compiling solana-stable-layout v2.2.1
+   Compiling solana-account-info v2.3.0
+   Compiling solana-program-pack v2.2.1
+   Compiling solana-loader-v2-interface v2.2.1
+   Compiling solana-cpi v2.2.1
+   Compiling solana-account v2.2.1
+   Compiling solana-instructions-sysvar v2.2.2
+   Compiling solana-message v2.4.0
+   Compiling solana-stake-interface v1.2.1
+   Compiling solana-program-entrypoint v2.3.0
+   Compiling solana-feature-gate-interface v2.2.2
+   Compiling solana-loader-v4-interface v2.2.1
+   Compiling solana-loader-v3-interface v5.0.0
+   Compiling solana-vote-interface v2.2.6
+   Compiling solana-example-mocks v2.2.1
+   Compiling solana-sysvar v2.3.0
+   Compiling anchor-attribute-account v0.31.1
+   Compiling anchor-attribute-event v0.31.1
+   Compiling anchor-attribute-access-control v0.31.1
+   Compiling anchor-attribute-error v0.31.1
+   Compiling anchor-attribute-constant v0.31.1
+   Compiling anchor-attribute-program v0.31.1
+   Compiling anchor-derive-accounts v0.31.1
+   Compiling solana-program v2.3.0
+   Compiling anchor-derive-serde v0.31.1
+   Compiling anchor-lang v0.31.1
+   Compiling betting-contract v0.1.0 (/root/betting-contract/betting-contract/programs/betting-contract)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 33.64s
+     Running unittests src/lib.rs (/root/betting-contract/betting-contract/target/debug/deps/betting_contract-47c2ea103c1829ec)
+Deploying cluster: https://api.devnet.solana.com
+Upgrade authority: /root/.config/solana/id.json
+Deploying program "betting_contract"...
+Program path: /root/betting-contract/betting-contract/target/deploy/betting_contract.so...
+[2025-10-27T09:27:20.492710906Z DEBUG reqwest::connect] starting new connection: https://api.devnet.solana.com/
+[2025-10-27T09:27:20.502179443Z DEBUG hyper_util::client::legacy::connect::http] connecting to 208.91.107.3:443
+[2025-10-27T09:27:20.984490236Z DEBUG hyper_util::client::legacy::connect::http] connected to 208.91.107.3:443
+[2025-10-27T09:27:20.421142513Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:20.423237857Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:22.022418480Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:22.027938372Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:22.433411220Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:22.435964895Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:23.030286307Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:23.031210229Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:23.461450010Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:23.473250779Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:23.891696610Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:23.891871997Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:24.328289300Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:24.328575720Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:24.759972572Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:24.760430962Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:25.476208536Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:25.477693451Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:26.002478802Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:26.003996032Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:26.444016800Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:26.446245019Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:27.070148267Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:27.079909797Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:27.471115398Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:27.479625095Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:27.853801289Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:27.853940574Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:28.286829977Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:28.286944894Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:28.676909355Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:28.678364736Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:29.191009690Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:29.191548944Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:29.579893537Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:29.588050042Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:29.986828675Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:29.987191329Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:30.376378327Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:30.378705031Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:30.808718202Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:31.310757522Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:31.686428198Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:31.686608595Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:32.072402383Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:32.073012132Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:32.486210987Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:32.487158427Z INFO  solana_connection_cache::connection_cache] Creating ConnectionCache connection_cache_cli_program_quic, pool size: 1
+[2025-10-27T09:27:32.487926031Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:32.892832198Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:32.893038343Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:33.290752333Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:33.290871107Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:33.660350488Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:33.660821633Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:34.511345807Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:34.785462199Z DEBUG rustls::client::hs] No cached session for DnsName("api.devnet.solana.com")
+[2025-10-27T09:27:34.785977842Z DEBUG rustls::client::hs] Not resuming any session
+[2025-10-27T09:27:35.007098732Z DEBUG rustls::client::hs] Using ciphersuite TLS13_AES_128_GCM_SHA256
+[2025-10-27T09:27:35.007146465Z DEBUG rustls::client::tls13] Not resuming
+[2025-10-27T09:27:35.007241674Z DEBUG rustls::client::tls13] TLS1.3 encrypted extensions: [ServerNameAck]
+[2025-10-27T09:27:35.007246847Z DEBUG rustls::client::hs] ALPN protocol is None
+[2025-10-27T09:27:35.630919558Z DEBUG tungstenite::handshake::client] Client handshake done.
+[2025-10-27T09:27:35.631073039Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:35.998633438Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:36.026042760Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:36.502838158Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:36.505362352Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:36.514662993Z INFO  solana_quic_client::nonblocking::quic_client] Local endpoint is : UdpSocket { addr: 0.0.0.0:8000, fd: 11 }
+[2025-10-27T09:27:36.522252762Z INFO  solana_quic_client::nonblocking::quic_client] Local endpoint is : UdpSocket { addr: 0.0.0.0:8001, fd: 12 }
+[2025-10-27T09:27:36.523273992Z INFO  solana_quic_client::nonblocking::quic_client] Local endpoint is : UdpSocket { addr: 0.0.0.0:8002, fd: 13 }
+[2025-10-27T09:27:36.524319871Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.524454790Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.524471150Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.524742505Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.525019034Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.525282333Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.720318109Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.720438469Z DEBUG quinn_proto::connection] ECN not acknowledged by peer
+[2025-10-27T09:27:36.721128976Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:36.721205092Z INFO  solana_quic_client::nonblocking::quic_client] Made connection to 64.130.41.138:8010 id 94260042813472 try_count 0, from connection cache warming?: false
+[2025-10-27T09:27:36.721276926Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.308860143Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.308985309Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.313376571Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.313604659Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.313648502Z DEBUG quinn_proto::connection] ECN not acknowledged by peer
+[2025-10-27T09:27:37.314162919Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.314241294Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.314411347Z INFO  solana_quic_client::nonblocking::quic_client] Made connection to 64.130.33.238:8010 id 94260042861216 try_count 0, from connection cache warming?: false
+[2025-10-27T09:27:37.314738883Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.314922251Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.315179785Z DEBUG reqwest::connect] starting new connection: https://api.devnet.solana.com/
+[2025-10-27T09:27:37.315262794Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:37.315360517Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.315891510Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.315951706Z INFO  solana_quic_client::nonblocking::quic_client] Made connection to 109.94.99.153:8010 id 94260042911616 try_count 0, from connection cache warming?: false
+[2025-10-27T09:27:37.316266686Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.324537930Z DEBUG hyper_util::client::legacy::connect::http] connecting to 208.91.107.3:443
+[2025-10-27T09:27:37.446866815Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.491820293Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.507709032Z DEBUG reqwest::connect] starting new connection: https://api.devnet.solana.com/
+[2025-10-27T09:27:37.512137840Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.515469632Z DEBUG hyper_util::client::legacy::connect::http] connecting to 141.98.219.145:443
+[2025-10-27T09:27:37.597602544Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.598175700Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.600895778Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.601063267Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.606731384Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.616616698Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.626387540Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.627730016Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.627786246Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.636585525Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.646434678Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.656656220Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.661179245Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.662192035Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.664709802Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.666948724Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.677253055Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.686372907Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.696545976Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.699047579Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.704371286Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.706908718Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.711920200Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.716833838Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.726959561Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.729980779Z DEBUG hyper_util::client::legacy::connect::http] connected to 208.91.107.3:443
+[2025-10-27T09:27:37.730291226Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.730730076Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:37.730860090Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.730961267Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.731530136Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.736678858Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.736735963Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.747004090Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.747058104Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.753487638Z DEBUG hyper_util::client::legacy::connect::http] connected to 141.98.219.145:443
+[2025-10-27T09:27:37.756387597Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.756461184Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.766252216Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.766305205Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.776351558Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.776424450Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.823748373Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.855722267Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.867514994Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.886245666Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.889469489Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:37.899334836Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.035569667Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:38.113169544Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.127101208Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:38.135689435Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.144722121Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:38.148588491Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.160822290Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.175410986Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.177485303Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.184722999Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.197360813Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.425445853Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.425632340Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.479819243Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.481062442Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.487893754Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.516708576Z INFO  solana_metrics::metrics] metrics disabled: environment variable not found
+[2025-10-27T09:27:38.517051100Z INFO  solana_metrics::metrics] datapoint: connection_cache_cli_program_quic cache_hits=395i cache_misses=3i cache_evictions=0i eviction_time_ms=0i get_connection_ms=7i get_connection_lock_ms=0i get_connection_hit_ms=0i get_connection_miss_ms=7i make_connection_ms=1790i total_connections=3i connection_reuse=273i connection_errors=0i zero_rtt_accepts=0i zero_rtt_rejects=0i congestion_events=2i streams_blocked_uni=0i data_blocked=0i acks=12i num_packets=276i total_batches=276i batch_failure=0i send_timeout=0i average_send_packet_us=538139i successful_packets=276i average_prepare_connection_us=248094i
+[2025-10-27T09:27:38.528188284Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.529082851Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.550478870Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.564324168Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.573486655Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.606411722Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.728059248Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.728218591Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.792661831Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.837725838Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.857109300Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.857181822Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.911246031Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.922605304Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.924091128Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.937662102Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.947095104Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.960443483Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:38.990294182Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.002984012Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.066215855Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.099512160Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.136012028Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.136136176Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.146453576Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:39.176865709Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.245929325Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.278531807Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.307670568Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.311358353Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.326893165Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.335098643Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.337404124Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.342161657Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.353256509Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.367095404Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.367180332Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.367893474Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.389423390Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.408286414Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.466090080Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.466270460Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.468520767Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.475052242Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.477689917Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.523082007Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.656611060Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.668025712Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.670700790Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.681489284Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.690913020Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.695154193Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.697081693Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.701188339Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.701513764Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.705681631Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.723710226Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.726825396Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.726937832Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.755017762Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.770793724Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.770984186Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.771253010Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.812131639Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.817641354Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.817910991Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.844122559Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.844269189Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.863702901Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.863761673Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.866204959Z INFO  solana_quic_client::nonblocking::quic_client] Local endpoint is : UdpSocket { addr: 0.0.0.0:8003, fd: 16 }
+[2025-10-27T09:27:39.867039162Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.867094230Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.924025942Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.924378099Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.950545976Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.950713410Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.970393237Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:39.970436336Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:39.992781180Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:39.992925773Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.009583317Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.034626937Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.034883112Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.035073528Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.035120537Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.035236402Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.060768638Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.060884707Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.071260169Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.081274266Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.081345108Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.100803661Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.100870344Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.107272428Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.107454621Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.111265829Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.122789390Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.148785997Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.148946101Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.149154018Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.149956034Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.161634104Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.175102704Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.175325586Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.213924428Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.214085506Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.228996875Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.234661602Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.240243169Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.240445179Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.266200506Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.266324009Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.280572035Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.280729138Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.280785372Z DEBUG quinn_proto::connection] ECN not acknowledged by peer
+[2025-10-27T09:27:40.281567489Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.281625274Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.281692054Z INFO  solana_quic_client::nonblocking::quic_client] Made connection to 147.28.198.57:8010 id 94260045511872 try_count 0, from connection cache warming?: false
+[2025-10-27T09:27:40.281794378Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.311211804Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.330179808Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.330309668Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.337786356Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.344898348Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.345210321Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.346196187Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.363605412Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.365453655Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.378897575Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:40.393528788Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.416383033Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.439777041Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.441390247Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.447052473Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.452372656Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.453584123Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.455446802Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.455770531Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.469478082Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.497184146Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.581984692Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.587147520Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.596462194Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.599448172Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.610436832Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.621741941Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.621921122Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.624012998Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.637378558Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.643741565Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.645420600Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.645808607Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.649207892Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.657831030Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.658553860Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.658609384Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.673420295Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.673765091Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.676837606Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.677280908Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.679162129Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.706205486Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.715068359Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.715395861Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.715498047Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.727613446Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.727786953Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.732162485Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.758424861Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.758514104Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.764468201Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.764572924Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.771538056Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.776956955Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.787914412Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.801382084Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.801713810Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.827957776Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.828048934Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.829101656Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.833286413Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.841086115Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.841364974Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.848001313Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.855677229Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.860834512Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.867118627Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.867273845Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.867872894Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.896165689Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.919638849Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.919749415Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.921659737Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.928821252Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.947256576Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.947463998Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.960148712Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.973650341Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.973710236Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.977882586Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:40.998209302Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.015537697Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.034061794Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.040007677Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.045393616Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.055415690Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.074375815Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.074468921Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.084619859Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.085833848Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.106763555Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.138024225Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.142301927Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.164466884Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.164546858Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.166338430Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.166455386Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.200377527Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.204544917Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.227297336Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.227471849Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.230201332Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.230260461Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.243372766Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.269523095Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.277867513Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.277959298Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.285901273Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.287715786Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.289978480Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.304017754Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.304090091Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.312352410Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.312414003Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.340798935Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.341031734Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.380369303Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:41.385414569Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.397151950Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.404483122Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.412167958Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.412291498Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.414839841Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.420064486Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.424631986Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.451274472Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.479702366Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.508322153Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.508398749Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.519156890Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.534826210Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.534899034Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.554851065Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.568343254Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.572007260Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.589717103Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.589888122Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.595797054Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.595882393Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.598393398Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.599086005Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.611444832Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.617036961Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.617092276Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.633247823Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.634559885Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.638277734Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.768401666Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.774949452Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.780851517Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.801418231Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.801530727Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.806439565Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.860400343Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.887187183Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.887515204Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.914230401Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.914302547Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.971139913Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:41.992301304Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.000760645Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.001539190Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.002998213Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.003080207Z INFO  solana_metrics::metrics] datapoint: connection_cache_cli_program_quic cache_hits=192i cache_misses=1i cache_evictions=0i eviction_time_ms=0i get_connection_ms=0i get_connection_lock_ms=0i get_connection_hit_ms=0i get_connection_miss_ms=0i make_connection_ms=415i total_connections=1i connection_reuse=314i connection_errors=0i zero_rtt_accepts=0i zero_rtt_rejects=0i congestion_events=0i streams_blocked_uni=0i data_blocked=0i acks=10i num_packets=315i total_batches=315i batch_failure=0i send_timeout=0i average_send_packet_us=1670373i successful_packets=315i average_prepare_connection_us=25340i
+[2025-10-27T09:27:42.003095331Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.012753617Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.012861460Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.022747991Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.022853323Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.032724480Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.032827296Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.042533527Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.042647619Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.052321832Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.052438568Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.062307041Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.062437301Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.073037155Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.073151307Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.081910175Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.082029142Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.092130785Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.092228547Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.102087440Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.102198172Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.111929316Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.112044682Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.114212402Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.122660010Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.122761971Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.132170543Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.132286837Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.141895394Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.141986676Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.152553821Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.152634534Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.162502917Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.162658836Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.172554089Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.172653928Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.181911726Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.182024492Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.182045130Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.191978439Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.192084411Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.201960991Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.202042795Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.211428268Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.213017740Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:42.213106596Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:42.213269070Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.213329268Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.213911402Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.222491953Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.222587081Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.232216060Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.232335391Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.242863541Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.242979736Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.251941954Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.252052722Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.262684376Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.262804261Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.272629879Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.272744845Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.282266372Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.282369927Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.292887210Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.293075629Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.301527182Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.302799547Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.302894519Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.312726530Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.312822647Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.322499559Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.322614530Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.327190721Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.327278639Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.332536250Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.332673992Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.342269407Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.342529382Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.352290725Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.352389401Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.361900563Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.362033410Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.372900445Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.372985577Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.382706322Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.382817045Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.392580765Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.392694807Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.401009723Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.401109615Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.402333535Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.402407741Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.406694202Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.411951229Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.412068415Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.413439519Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.422759278Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.422859882Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.428329538Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.428443779Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.431957080Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.432041537Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.442601742Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.442712385Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.446043869Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.450919048Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.452160980Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.452230537Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.454557745Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.454589526Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.462335928Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.462462288Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.463038638Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.463616005Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.472237988Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.472315863Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.481963558Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.482273295Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.482409336Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.484783584Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.490967849Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.491103374Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.492669990Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.492814190Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.502656797Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.502768766Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.509511443Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.509647557Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.512444981Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.512550889Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.517165642Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.517233448Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.518759919Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.521990686Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.522054219Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.522105004Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.523654771Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.531631918Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.531810466Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.531891672Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.542582216Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.542713054Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.552724680Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.552835994Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.562542895Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.562664665Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.570728981Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.570835542Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.572056877Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.572158132Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.577883007Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.578009032Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.582264841Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.582365846Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.588138452Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.591761132Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:42.591891383Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.591946578Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.594478386Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.598479769Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.601916688Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.602016481Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.611981043Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.612079100Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.614575442Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.614629033Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.621969354Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.622073004Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.624391799Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.632779445Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.632883435Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.635573550Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.641943988Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.642022776Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.644860993Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.652327800Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.652413393Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.661952204Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.662057010Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.672506696Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.672607720Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.675282030Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.682545246Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.682627772Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.692353274Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.692453355Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.696713485Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.702255463Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.702339921Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.706300059Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.712752261Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.712873151Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.713669110Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.722054891Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.722166491Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.730556784Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.731923354Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:42.731975982Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.732041741Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.739396272Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.742787442Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.742955036Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.747497238Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.751677576Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.751909263Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.751961066Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.762485739Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.762611841Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.771174797Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.771232443Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.772440490Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.772511614Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.772850698Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.782265612Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.782358145Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.787627378Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.791929520Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.792008131Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.799507660Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.799572741Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.802119953Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.802196841Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.812653696Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.812748683Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.814378079Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.822821836Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.822906849Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.832622572Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.832726896Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.833195692Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.833297139Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.834918911Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.837604644Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.842108165Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.842223273Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.844755634Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.845122419Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.851732630Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.851847004Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.862659903Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.862748747Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.864753047Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.864891341Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.872437030Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.872532234Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.872548209Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.882208197Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.882319871Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.882341807Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.884923084Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.885607958Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.886266708Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.887484015Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.891912467Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.892031871Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.892054201Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.892472906Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.899292918Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.899980450Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.901650200Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.901784286Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.901812852Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.901862839Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.912405308Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.912523909Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.912539363Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.922237064Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.922410642Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.922432318Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.926862785Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.926964092Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.932815847Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.932972961Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.933000548Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.936166325Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.940326560Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.940940752Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.942214965Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.942314515Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.942335417Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.944576371Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.951954628Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.952093595Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.952117374Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.961242097Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.961903804Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.961939577Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.961976983Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.968510296Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.970624882Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.972164167Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.972254054Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.972298516Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.981995138Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.982080870Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.982102188Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.984107649Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.989075157Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.992604532Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.992774772Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:42.992817922Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.002604046Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.002706931Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.002745872Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.005603097Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.007195267Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.012710897Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.012826260Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.012848945Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.014383418Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.014436957Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.014819019Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.021300886Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.021488215Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.021848590Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.021918678Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.021936286Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.030633269Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.031554321Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.032806495Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.032887813Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.033019906Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.035487741Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.041914730Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.042000609Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.042021146Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.052804965Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.052963679Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.052993537Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.053024887Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.053423132Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.053538908Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.056230108Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.056297583Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.058949525Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.062157971Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.062268401Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.062286140Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.071277419Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.072568976Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.072664309Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.072685810Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.082631395Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.082741712Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.082762081Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.083574559Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.083690803Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.092487814Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.092629890Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.092654284Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.095028133Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.095313272Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:43.095364194Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:43.101980675Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.102089916Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.102115399Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.112269492Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.112894344Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.113073314Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.114639538Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.122117071Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.122228164Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.122249155Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.132782558Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.132971562Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.133011618Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.142500454Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.142620793Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.142644039Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.149371342Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.151927896Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.152018398Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.152035776Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.162787534Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.162901403Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.162920571Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.172598557Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.172745500Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.172769511Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.182952754Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.183055099Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.183061063Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.191896700Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.191994493Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.192001013Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.201018991Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.202774578Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.202860269Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.202877564Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.212720204Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.212853452Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.212875035Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.222575444Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.222662895Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.222667513Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.232057761Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.232152319Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.232156371Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.241889630Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.241968891Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.241974419Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.252486033Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.252604009Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.252610756Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.253335918Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.253430497Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.254995083Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.256339238Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.262732687Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.262870422Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.262891961Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.263742230Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.264546659Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.270822786Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.272661133Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.272736379Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.272757898Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.274812708Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.274886827Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.279549129Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.282365089Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.282501723Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.282524697Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.283890457Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.285786118Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.285858617Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.285877954Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.289066587Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.291433391Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.292107141Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.292160818Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.292172240Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.295306495Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.295375682Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.295904499Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.302192111Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.302301295Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.302324663Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.305344504Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.312816744Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.312884816Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.312958884Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.312979257Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.320347488Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.321677327Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.321849133Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.321936304Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.321954947Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.329578231Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.331865840Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.331954233Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.331968737Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.333643310Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.338925649Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.342357430Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.342453733Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.342471171Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.345384614Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.351616664Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.351712265Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.351798357Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.351816793Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.351829025Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.353599679Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.361889268Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.361979610Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.361993502Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.365198530Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.365332677Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.371871924Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.371953955Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.371967443Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.372635197Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.381962953Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.382130621Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.382150388Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.392154633Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.392264397Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.392284652Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.396039673Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.399275808Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.402578272Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.402689020Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.402709912Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.412249232Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.412742304Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.412824699Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.416744751Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.421673403Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.421833811Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.421878799Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.421897328Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.432486476Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.432593790Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.432618060Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.436152504Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.436225949Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.442606603Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.442731082Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.442751582Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.447539338Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.447609087Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.451846295Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.451962812Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.451986726Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.461046659Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.461254467Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.461286162Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.462990545Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.463123541Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.463145402Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.466684396Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.471974551Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.472068249Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.472082747Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.476776863Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.482169656Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.482263294Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.482279401Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.483138943Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.483310801Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:43.492827856Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.493132728Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.493181290Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.501945063Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.502033901Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.502052984Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.509577940Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.509677719Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.512394883Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.512491239Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.512510821Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.521931415Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.522043708Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.522065779Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.531916489Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.532046679Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.532091440Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.532998717Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.539421576Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.542733023Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.542860179Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.542879548Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.546518989Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.552790611Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.552883902Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.552899775Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.562535711Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.562653139Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.562694711Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.565421653Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.565507744Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.570124341Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.572807562Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.572904496Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.572923742Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.572927861Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.582507635Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.582614600Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.582636628Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.589661733Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.589777529Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.592556859Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.592665900Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.592688403Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.602480348Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.602557484Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.602569937Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.606633805Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.612077779Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.612170741Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.612245419Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.616718706Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.616798125Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.622010861Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.622109438Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.622129650Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.628225558Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.629043778Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.631603401Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.631763768Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.631836086Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.631840716Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.642621028Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.642745720Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.642754986Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.652765228Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.652846753Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.652851672Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.655271446Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.655309063Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.657073206Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.661627450Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.661830584Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.661919944Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.665144785Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.669256111Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.672497816Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.672583911Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.679872097Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.682710836Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.682805303Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.682813213Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.682816646Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.692496291Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.692615080Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.694710145Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.702189367Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.702276198Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.707624093Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.707663534Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.711277097Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.712566754Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.712643453Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.722184764Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.722274252Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.724150759Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.726355395Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.732667356Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.732773151Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.742356239Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.742489381Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.743952205Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.752446365Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.752500537Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.752567382Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.752574540Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.755795633Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.755902377Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.755959597Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.762769185Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.762891019Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.768370229Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.769893014Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.769938120Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.772593660Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.772680995Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.776349080Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.781847761Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.781953480Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.783569014Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.792536108Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.792657244Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.796054354Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.802433059Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.802522633Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.808040683Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.809726414Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.809824345Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.812064050Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.812183567Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.817291712Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.822584069Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.822682712Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.822691860Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.825217764Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.832071177Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.832168354Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.836406606Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.841510581Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.841953439Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.842007750Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.852674067Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.852797840Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.862474981Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.862578771Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.868041784Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.868149472Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.872839471Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.872946455Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.876043022Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.882402375Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.882492059Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.892084999Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.892169989Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.902748877Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.902865621Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.906355323Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.912446002Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.912557089Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.922968463Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.923070175Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.931996118Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.932081020Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.932151548Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.932157911Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.943355986Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.943502634Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.952799775Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.952917611Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.962795470Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.962989413Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.972612609Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.972775520Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.982367206Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.982511588Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.993005520Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:43.993104285Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.002597538Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.002836426Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.012941207Z INFO  solana_metrics::metrics] datapoint: connection_cache_cli_program_quic cache_hits=516i cache_misses=0i cache_evictions=0i eviction_time_ms=0i get_connection_ms=0i get_connection_lock_ms=0i get_connection_hit_ms=0i get_connection_miss_ms=0i make_connection_ms=0i total_connections=0i connection_reuse=481i connection_errors=0i zero_rtt_accepts=0i zero_rtt_rejects=0i congestion_events=7i streams_blocked_uni=0i data_blocked=0i acks=74i num_packets=481i total_batches=481i batch_failure=0i send_timeout=0i average_send_packet_us=7i successful_packets=481i average_prepare_connection_us=1i
+[2025-10-27T09:27:44.012949107Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.013094672Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.022245711Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.022357385Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.032480131Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.032628129Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.043063331Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.043180424Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.052463569Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.052591787Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.062947057Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.063072311Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.069266424Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.069345162Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.070569758Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.071980521Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.072099157Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.072782802Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.072932150Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.072970917Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.073034675Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.073151953Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.082662780Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.082781891Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.092115042Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.092224246Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.102412171Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.102510720Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.111855189Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.111964787Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.111972538Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.123108175Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.123264965Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.132596050Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.132696972Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.142747878Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.142892830Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.152371632Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.152505332Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.163008297Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.163123905Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.172640585Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.172767199Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.181931556Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.182018224Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.193110456Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.193265753Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.202521761Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.202611302Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.212748910Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.212873153Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.222970657Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.223073073Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.232370079Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.232494411Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.243307085Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.243450990Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.252585073Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.252706222Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.262670858Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.262778419Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.272774937Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.272868646Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.283015543Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.283140795Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.293331615Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.293421252Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.302613029Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.302727129Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.313005213Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.313120729Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.322193300Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.322320371Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.332468324Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.332514603Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.342270774Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.342322047Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.342327481Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.346642055Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.346776003Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.352770947Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.352930608Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.353205705Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.353453911Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.353665036Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.353849198Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.354578763Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.363308303Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.363394250Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.367179100Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.372610149Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.372723757Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.382977131Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.392457751Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.395510742Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.402320632Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.413156850Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.413838176Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.422903261Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.428689891Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.432625230Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.442529981Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.447539468Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.452318412Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.462598744Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.472453477Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.482254853Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.492207078Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.503192415Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.513125800Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.523091006Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.526596200Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.526668091Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.526740223Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.530561827Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.530633943Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.532998937Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.537618498Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.538409254Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.542157602Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.549448928Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.549538076Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.552896383Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.563096270Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.564564311Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.564622088Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.570176409Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.570397502Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.572024814Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.575354469Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.575399148Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.579275299Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.583018654Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.585288117Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.593001508Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.594765996Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.602473739Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.603250457Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.612903258Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.621788698Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.632612232Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.642433224Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.652439568Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.662560858Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.672535997Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.682478600Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.693411731Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.703204827Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.713255327Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.723259193Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.732219989Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.742347386Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.752503783Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.762355480Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.773356160Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.783155887Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.793181835Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.803168899Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.812217136Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.822274027Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.832284949Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.842124009Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.852994058Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.862908318Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.872897525Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.882997052Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.892943680Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.902910786Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.913052175Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.923017051Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.933058706Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.941970618Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.951790116Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.951872500Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.951880797Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.956555689Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.956627164Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.962575387Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.972567716Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.982590491Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:44.992428270Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.002343719Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.013258501Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.014605175Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.014657689Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.022335003Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.024462721Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.033285107Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.043245522Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.069852679Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.069912928Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.158389343Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.158511299Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.244648280Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.246314436Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.257196471Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.257365936Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.257509138Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.257656065Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.264957170Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.265101032Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.265189173Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.265315751Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.271043134Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.271226523Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.272517281Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.273391260Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.273953410Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.282851658Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.293213558Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.303025393Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.312472845Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.322338768Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.332635743Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.343706750Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.352476678Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.354153538Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.354391523Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.359784325Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.362704035Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.372706999Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.373179626Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.383143163Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.389253978Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.393111380Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.529083135Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.552631984Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.554752581Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.567237887Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.580217093Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.585300695Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.587280079Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.611472532Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.615231385Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.658265024Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.659994651Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.667808281Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.668013922Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.677892024Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.682644105Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.699296806Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.699483680Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.707732426Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.724342827Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.726344357Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.730529466Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.750024470Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.757933233Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.764441275Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.789222920Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.789673714Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.789716774Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.860109000Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.898552865Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.898724995Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.899233599Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.964102695Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.976364863Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.976692619Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.992595524Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.992876134Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:45.997555451Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.012580624Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.021289742Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.062843979Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.077252226Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.088820441Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.103646494Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.103712932Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.115749617Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.116044591Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.119104711Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.120430464Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.139894420Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.165636987Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.165696213Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.167395555Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.167827798Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.187678975Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.246852181Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.298149865Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.302279886Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.303856094Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.306842602Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.309120197Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.314947485Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.318971952Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.366466907Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.378826875Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.389544948Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.408758036Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.436749388Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.461222804Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.461353099Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.484075539Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.509657804Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.530381933Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.530463157Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.531588754Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.553763378Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.553819273Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.555482463Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.555623253Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.577208343Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.587801759Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.607115884Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.612196258Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.643503388Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.685126597Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.686712030Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.687588173Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.689020796Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.717387151Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.732709335Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.742363692Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.753035937Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.755915484Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.768615405Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.768706195Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.771269906Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.772506484Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.786473919Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.789258064Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.823510169Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.825548169Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.849985414Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.858521993Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.876109293Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.876226563Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.878241853Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.897816158Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.912357021Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.932631318Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.932743948Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.951393813Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.964229010Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.973381331Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:46.985930233Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.000128751Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.000206530Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.018514789Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.064861856Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.084418632Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.111539253Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.127847585Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.139413772Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.147350930Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.190292258Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.211992127Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.225900219Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.225968365Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.230341768Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.230511763Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.376582444Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.475010777Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.501017459Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.527754692Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.601514215Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.665435748Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.754397935Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.754546545Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.773314779Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.793040839Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.825310601Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.955802555Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.965723347Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.965806894Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:47.965959210Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.075183292Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.092044775Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.119809722Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.141710702Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.142144025Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.266533824Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.266998085Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.293022297Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.293131935Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.367707420Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.368074504Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.422150493Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.467940539Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.476310397Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.476634430Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.484089667Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:48.487415216Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.502961348Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.503043411Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.560145100Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.582798239Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.583318211Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.602212356Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.602328366Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.692604583Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.692925357Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.763984064Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.772820800Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.798222752Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.810236166Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.824301233Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.824367689Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.890161807Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:48.890256676Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:48.957904276Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:48.957981313Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.015971596Z DEBUG solana_metrics::metrics] run: attempting to write 3 points
+[2025-10-27T09:27:49.029883899Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.053280600Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.089485248Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.102109965Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.148709603Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.274228513Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:49.355416181Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.367261109Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.378942437Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.382336972Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.423354641Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.423417216Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.714789889Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:49.860425834Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.003244761Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.007787997Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.020561887Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.031514237Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.031578360Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.049340086Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.070450758Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.149844405Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.149934616Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.273009447Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.291487394Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.298843981Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.311598307Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.338009964Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.341325796Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.380495394Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.423533174Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.560142670Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.572562629Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.573760677Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.610362004Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.625904691Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:50.626126591Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.626205778Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.626212301Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.626223012Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.642174435Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.698017515Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.783146810Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.064793174Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.067039263Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.067166480Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.067203598Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:51.067532615Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:51.432310431Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:51.432571941Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:51.473933926Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.751579201Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.776990893Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:51.804871309Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:51.805130556Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:52.075891644Z DEBUG quinn::connection] drive; id=0
+[2025-10-27T09:27:50.870495438Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:50.870650333Z DEBUG hyper_util::client::legacy::pool] reuse idle connection for ("https", api.devnet.solana.com)
+[2025-10-27T09:27:51.261771215Z DEBUG hyper_util::client::legacy::pool] pooling idle connection for ("https", api.devnet.solana.com)
+Program Id: DRNEUsSx9gNre6f6mLFhrHDVRDfD4eMGu68dussziUgi
+
+Signature: 4Mn2pZfoRr2aEEzq6vMGfanJahE3qZLR6LxxnpR9fyY1wQYgCjuMo1jyByoBr7zaeodugyka2fQci1mnZ77j8H4W
+
+Deploy success
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/root/betting-contract/betting-contract/Anchor.toml"
+
+[2025-10-27T09:27:51.335680066Z DEBUG tungstenite::client] Trying to contact wss://api.devnet.solana.com/ at 141.98.219.145:443...
+[2025-10-27T09:27:51.575768617Z DEBUG rustls::client::hs] No cached session for DnsName("api.devnet.solana.com")
+[2025-10-27T09:27:51.575958019Z DEBUG rustls::client::hs] Not resuming any session
+yarn run v1.22.22
+$ /root/betting-contract/betting-contract/node_modules/.bin/ts-mocha -p ./tsconfig.json -t 1000000 'tests/**/*.ts'
+[2025-10-27T09:27:51.861601968Z DEBUG rustls::client::hs] Using ciphersuite TLS13_AES_128_GCM_SHA256
+[2025-10-27T09:27:51.861681842Z DEBUG rustls::client::tls13] Not resuming
+[2025-10-27T09:27:51.861800417Z DEBUG rustls::client::tls13] TLS1.3 encrypted extensions: [ServerNameAck]
+[2025-10-27T09:27:51.861807420Z DEBUG rustls::client::hs] ALPN protocol is None
+[2025-10-27T09:27:52.155859846Z DEBUG tungstenite::handshake::client] Client handshake done.
+(node:23640) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23640) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///root/betting-contract/betting-contract/tests/betting-contract.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /root/betting-contract/betting-contract/package.json.
+
+
+  betting-contract
+Server responded with 429 Too Many Requests.  Retrying after 500ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 1000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 2000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 4000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 500ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 1000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 2000ms delay...
+Server responded with 429 Too Many Requests.  Retrying after 4000ms delay...
+    1) "before all" hook in "betting-contract"
+
+
+  0 passing (28s)
+  1 failing
+
+  1) betting-contract
+       "before all" hook in "betting-contract":
+     Error: 429 Too Many Requests:  {"jsonrpc":"2.0","error":{"code": 429, "message":"You've either reached your airdrop limit today or the airdrop faucet has run dry. Please visit https://faucet.solana.com for alternate sources of test SOL"}, "id": "760dcc16-aebe-4641-a390-17f8bdd70fb0" } 
+
+      at ClientBrowser.callServer (node_modules/@solana/web3.js/src/connection.ts:1703:18)
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+
+
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.

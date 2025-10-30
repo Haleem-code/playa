@@ -12,6 +12,7 @@ describe("betting-contract", () => {
 
   // Test accounts
   let admin: anchor.web3.Keypair;
+  let moderator: anchor.web3.Keypair;
   let user1: anchor.web3.Keypair;
   let user2: anchor.web3.Keypair;
   let user3: anchor.web3.Keypair;
@@ -28,23 +29,36 @@ describe("betting-contract", () => {
   let user2BetPda: PublicKey;
   let user3BetPda: PublicKey;
 
+
   before(async () => {
-   
+    // IMPORTANT: Fund the admin account with at least 1 SOL before running tests.
+    // Use the printed public key below and run:
+    //   solana transfer <admin_pubkey> 1
+    // from your funded wallet.
+
     admin = anchor.web3.Keypair.generate();
+    moderator = anchor.web3.Keypair.generate();
     user1 = anchor.web3.Keypair.generate();
     user2 = anchor.web3.Keypair.generate();
     user3 = anchor.web3.Keypair.generate();
 
+    console.log("\n=== FUND THESE TEST ACCOUNTS BEFORE RUNNING TESTS ===");
+    console.log("Admin pubkey:", admin.publicKey.toBase58());
+    console.log("Moderator pubkey:", moderator.publicKey.toBase58());
+    console.log("User1 pubkey:", user1.publicKey.toBase58());
+    console.log("User2 pubkey:", user2.publicKey.toBase58());
+    console.log("User3 pubkey:", user3.publicKey.toBase58());
+    console.log("===============================================\n");
 
-    await provider.connection.requestAirdrop(admin.publicKey, 10 * LAMPORTS_PER_SOL);
-    await provider.connection.requestAirdrop(user1.publicKey, 10 * LAMPORTS_PER_SOL);
-    await provider.connection.requestAirdrop(user2.publicKey, 10 * LAMPORTS_PER_SOL);
-    await provider.connection.requestAirdrop(user3.publicKey, 10 * LAMPORTS_PER_SOL);
-
+    // Optionally, you can uncomment the airdrop lines below if running on localnet/devnet and not rate-limited
+    // await provider.connection.requestAirdrop(admin.publicKey, 10 * LAMPORTS_PER_SOL);
+    // await provider.connection.requestAirdrop(moderator.publicKey, 10 * LAMPORTS_PER_SOL);
+    // await provider.connection.requestAirdrop(user1.publicKey, 10 * LAMPORTS_PER_SOL);
+    // await provider.connection.requestAirdrop(user2.publicKey, 10 * LAMPORTS_PER_SOL);
+    // await provider.connection.requestAirdrop(user3.publicKey, 10 * LAMPORTS_PER_SOL);
 
     await new Promise(resolve => setTimeout(resolve, 2000));
 
- 
     [bettingPoolPda] = PublicKey.findProgramAddressSync(
       [Buffer.from("betting_pool"), Buffer.from(STREAM_ID)],
       program.programId
@@ -88,7 +102,7 @@ describe("betting-contract", () => {
       const bettingDeadline = Math.floor(Date.now() / 1000) + (60 * 60);
       
       const tx = await program.methods
-        .initialize(STREAM_ID, new anchor.BN(bettingDeadline))
+        .initialize(STREAM_ID, new anchor.BN(bettingDeadline), moderator.publicKey)
         .accountsPartial({
           bettingPool: bettingPoolPda,
           admin: admin.publicKey,
@@ -100,13 +114,14 @@ describe("betting-contract", () => {
       console.log("Initialize transaction signature:", tx);
 
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
-      expect(bettingPool.admin.toString()).to.equal(admin.publicKey.toString());
+  expect(bettingPool.admin.toString()).to.equal(admin.publicKey.toString());
+  expect(bettingPool.moderator.toString()).to.equal(moderator.publicKey.toString());
       expect(bettingPool.streamId).to.equal(STREAM_ID);
       expect(bettingPool.totalPool.toNumber()).to.equal(0);
       expect(bettingPool.player1Bets.toNumber()).to.equal(0);
       expect(bettingPool.player2Bets.toNumber()).to.equal(0);
       expect(bettingPool.winnerDeclared).to.be.false;
-      expect(bettingPool.creatorFeeRate).to.equal(250); // 2.5%
+      expect(bettingPool.creatorFeeRate).to.equal(500); // 5%
       expect(bettingPool.platformFeeRate).to.equal(250); // 2.5%
       expect(bettingPool.isPayoutComplete).to.be.false;
     });
@@ -123,7 +138,7 @@ describe("betting-contract", () => {
 
       // User1 creates a pool (this should succeed now)
       await program.methods
-        .initialize(streamId2, new anchor.BN(bettingDeadline2))
+        .initialize(streamId2, new anchor.BN(bettingDeadline2), moderator.publicKey)
         .accountsPartial({
           bettingPool: poolPda2,
           admin: user1.publicKey,
@@ -138,7 +153,7 @@ describe("betting-contract", () => {
           .declareWinner(1)
           .accountsPartial({
             bettingPool: poolPda2,
-            admin: user2.publicKey, // Wrong admin
+            signer: user2.publicKey, // Wrong signer
           })
           .signers([user2])
           .rpc();
@@ -228,7 +243,7 @@ describe("betting-contract", () => {
     });
 
     it("Fails to place bet with invalid prediction", async () => {
-      // Fetch current bet count to derive correct PDA
+      
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       const currentBetCount = bettingPool.player1BetCount + bettingPool.player2BetCount;
       
@@ -266,17 +281,33 @@ describe("betting-contract", () => {
         .declareWinner(1)
         .accountsPartial({
           bettingPool: bettingPoolPda,
-          admin: admin.publicKey,
+          signer: admin.publicKey,
         })
         .signers([admin])
         .rpc();
 
-      console.log("Declare winner transaction:", tx);
+      console.log("Declare winner transaction (admin):", tx);
 
       // Verify winner declared
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       expect(bettingPool.winnerDeclared).to.be.true;
       expect(bettingPool.winningOutcome).to.equal(1);
+    });
+
+    it("Moderator can declare winner (should fail if already declared)", async () => {
+      try {
+        await program.methods
+          .declareWinner(2)
+          .accountsPartial({
+            bettingPool: bettingPoolPda,
+            signer: moderator.publicKey,
+          })
+          .signers([moderator])
+          .rpc();
+        expect.fail("Should have failed with winner already declared");
+      } catch (error) {
+        expect(error.message).to.include("WinnerAlreadyDeclared");
+      }
     });
 
     it("Fails to declare winner twice", async () => {
@@ -285,7 +316,7 @@ describe("betting-contract", () => {
           .declareWinner(2)
           .accountsPartial({
             bettingPool: bettingPoolPda,
-            admin: admin.publicKey,
+            signer: admin.publicKey,
           })
           .signers([admin])
           .rpc();
@@ -459,4 +490,5 @@ describe("betting-contract", () => {
       expect(bettingPool.winningOutcome).to.equal(1);
     });
   });
+
 });
