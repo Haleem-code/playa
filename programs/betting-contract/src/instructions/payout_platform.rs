@@ -1,7 +1,6 @@
 use anchor_lang::prelude::*;
 use crate::state::*;
 use crate::error::BettingError;
-use crate::constants::PLATFORM_WALLET;
 
 #[derive(Accounts)]
 pub struct PayoutPlatform<'info> {
@@ -16,7 +15,7 @@ pub struct PayoutPlatform<'info> {
     /// CHECK: This is the platform's wallet address
     #[account(
         mut,
-        constraint = platform_wallet.key() == PLATFORM_WALLET @ BettingError::InvalidPlatformWallet
+        constraint = platform_wallet.key() == betting_pool.platform_treasury @ BettingError::InvalidPlatformWallet
     )]
     pub platform_wallet: AccountInfo<'info>,
     
