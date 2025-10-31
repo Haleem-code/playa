@@ -5,12 +5,6 @@ pub mod instructions;
 pub mod state;
 pub mod error;
 
-pub use instructions::initialize::*;
-pub use instructions::place_bet::*;
-pub use instructions::declare_winner::*;
-pub use instructions::payout_winners::*;
-pub use instructions::payout_creator::*;
-pub use instructions::payout_platform::*;
 
 declare_id!("DRNEUsSx9gNre6f6mLFhrHDVRDfD4eMGu68dussziUgi");
 
@@ -18,11 +12,17 @@ declare_id!("DRNEUsSx9gNre6f6mLFhrHDVRDfD4eMGu68dussziUgi");
 pub mod betting_contract {
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>, stream_id: String, betting_deadline: i64, moderator_pubkey: Pubkey) -> Result<()> {
-        instructions::initialize::handler(ctx, stream_id, betting_deadline, moderator_pubkey)
+     pub fn initialize(
+        ctx: Context<Initialize>,
+        stream_id: String,
+        betting_deadline: i64,
+        moderator_pubkey: Pubkey,
+        platform_treasury: Pubkey,
+    ) -> Result<()> {
+        instructions::initialize::handler(ctx, stream_id, betting_deadline, moderator_pubkey, platform_treasury)
     }
 
-    pub fn place_bet(ctx: Context<PlaceBet>, prediction: u8, amount: u64) -> Result<()> {
+     pub fn place_bet(ctx: Context<PlaceBet>, prediction: u8, amount: u64) -> Result<()> {
         instructions::place_bet::handler(ctx, prediction, amount)
     }
 
