@@ -2,13 +2,18 @@ import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { BettingContract } from "../target/types/betting_contract";
 import { expect } from "chai";
-import { PublicKey, SystemProgram, LAMPORTS_PER_SOL } from "@solana/web3.js";
+import { PublicKey, SystemProgram, LAMPORTS_PER_SOL, Transaction } from "@solana/web3.js";
+import * as fs from "fs";
+import * as path from "path";
 
 describe("betting-contract", () => {
   // Configure the client
   anchor.setProvider(anchor.AnchorProvider.env());
   const program = anchor.workspace.BettingContract as Program<BettingContract>;
   const provider = anchor.AnchorProvider.env();
+
+  // Bank account - This will be your pre-funded account that distributes funds
+  let bankKeypair: anchor.web3.Keypair;
 
   // Test accounts
   let admin: anchor.web3.Keypair;
@@ -18,7 +23,7 @@ describe("betting-contract", () => {
   let user3: anchor.web3.Keypair;
 
   // Test constants
-  const STREAM_ID = "test-stream-123";
+  const STREAM_ID = "test-stream-" + Date.now();
   const BET_AMOUNT_1_SOL = new anchor.BN(LAMPORTS_PER_SOL);
   const BET_AMOUNT_2_SOL = new anchor.BN(2 * LAMPORTS_PER_SOL);
   const BET_AMOUNT_HALF_SOL = new anchor.BN(0.5 * LAMPORTS_PER_SOL);
@@ -29,42 +34,122 @@ describe("betting-contract", () => {
   let user2BetPda: PublicKey;
   let user3BetPda: PublicKey;
 
+  /**
+   * Transfer SOL from bank account to a recipient
+   */
+  async function transferFromBank(to: PublicKey, amount: number): Promise<void> {
+    try {
+      const tx = new Transaction().add(
+        SystemProgram.transfer({
+          fromPubkey: bankKeypair.publicKey,
+          toPubkey: to,
+          lamports: amount,
+        })
+      );
+      
+      await provider.sendAndConfirm(tx, [bankKeypair]);
+      console.log(`✅ Transferred ${amount / LAMPORTS_PER_SOL} SOL to ${to.toBase58()}`);
+    } catch (error) {
+      console.error(`❌ Failed to transfer to ${to.toBase58()}:`, error.message);
+      throw error;
+    }
+  }
+
+  /**
+   * Load or create the bank keypair
+   */
+  function loadBankKeypair(): anchor.web3.Keypair {
+    const bankPath = path.join(__dirname, 'keypairs', 'bank.json');
+    
+    try {
+      // Try to load existing bank keypair
+      const bankJson = JSON.parse(fs.readFileSync(bankPath, 'utf-8'));
+      const keypair = anchor.web3.Keypair.fromSecretKey(Buffer.from(bankJson));
+      console.log("📦 Loaded existing bank keypair");
+      return keypair;
+    } catch (error) {
+      // If doesn't exist, create a new one
+      console.log("📦 Creating new bank keypair...");
+      const keypair = anchor.web3.Keypair.generate();
+      
+      // Create directory if it doesn't exist
+      const dir = path.dirname(bankPath);
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+      
+      // Save the keypair
+      fs.writeFileSync(
+        bankPath,
+        JSON.stringify(Array.from(keypair.secretKey))
+      );
+      
+      console.log("💾 Saved bank keypair to:", bankPath);
+      console.log("🏦 Bank address:", keypair.publicKey.toBase58());
+      console.log("\n⚠️  IMPORTANT: Fund this bank account first!");
+      console.log(`Run: solana airdrop 10 ${keypair.publicKey.toBase58()} --url devnet\n`);
+      
+      return keypair;
+    }
+  }
 
   before(async () => {
-    // IMPORTANT: Fund the admin account with at least 1 SOL before running tests.
-    // Use the printed public key below and run:
-    //   solana transfer <admin_pubkey> 1
-    // from your funded wallet.
+    // Load the bank account
+    bankKeypair = loadBankKeypair();
+    
+    // Check bank balance
+    const bankBalance = await provider.connection.getBalance(bankKeypair.publicKey);
+    console.log(`🏦 Bank balance: ${bankBalance / LAMPORTS_PER_SOL} SOL`);
+    
+    if (bankBalance < 10 * LAMPORTS_PER_SOL) {
+      console.error("\n❌ ERROR: Bank account has insufficient funds!");
+      console.error(`Current balance: ${bankBalance / LAMPORTS_PER_SOL} SOL`);
+      console.error(`Required: At least 10 SOL`);
+      console.error(`\nFund the bank account:`);
+      console.error(`solana airdrop 10 ${bankKeypair.publicKey.toBase58()} --url devnet`);
+      console.error(`\nOr transfer from your wallet:`);
+      console.error(`solana transfer ${bankKeypair.publicKey.toBase58()} 10 --url devnet\n`);
+      throw new Error("Insufficient bank funds");
+    }
 
+    // Generate test accounts
     admin = anchor.web3.Keypair.generate();
     moderator = anchor.web3.Keypair.generate();
     user1 = anchor.web3.Keypair.generate();
     user2 = anchor.web3.Keypair.generate();
     user3 = anchor.web3.Keypair.generate();
 
-    console.log("\n=== FUND THESE TEST ACCOUNTS BEFORE RUNNING TESTS ===");
-    console.log("Admin pubkey:", admin.publicKey.toBase58());
-    console.log("Moderator pubkey:", moderator.publicKey.toBase58());
-    console.log("User1 pubkey:", user1.publicKey.toBase58());
-    console.log("User2 pubkey:", user2.publicKey.toBase58());
-    console.log("User3 pubkey:", user3.publicKey.toBase58());
-    console.log("===============================================\n");
+    console.log("\n=== Generated Test Accounts ===");
+    console.log("Admin:", admin.publicKey.toBase58());
+    console.log("Moderator:", moderator.publicKey.toBase58());
+    console.log("User1:", user1.publicKey.toBase58());
+    console.log("User2:", user2.publicKey.toBase58());
+    console.log("User3:", user3.publicKey.toBase58());
+    console.log("================================\n");
 
-    // Optionally, you can uncomment the airdrop lines below if running on localnet/devnet and not rate-limited
-    // await provider.connection.requestAirdrop(admin.publicKey, 10 * LAMPORTS_PER_SOL);
-    // await provider.connection.requestAirdrop(moderator.publicKey, 10 * LAMPORTS_PER_SOL);
-    // await provider.connection.requestAirdrop(user1.publicKey, 10 * LAMPORTS_PER_SOL);
-    // await provider.connection.requestAirdrop(user2.publicKey, 10 * LAMPORTS_PER_SOL);
-    // await provider.connection.requestAirdrop(user3.publicKey, 10 * LAMPORTS_PER_SOL);
+    // Fund all test accounts from bank
+    console.log("💸 Funding test accounts from bank...");
+    await transferFromBank(admin.publicKey, 3 * LAMPORTS_PER_SOL);
+    await transferFromBank(moderator.publicKey, 1 * LAMPORTS_PER_SOL);
+    await transferFromBank(user1.publicKey, 2 * LAMPORTS_PER_SOL);
+    await transferFromBank(user2.publicKey, 3 * LAMPORTS_PER_SOL);
+    await transferFromBank(user3.publicKey, 2 * LAMPORTS_PER_SOL);
 
+    // Wait a bit for transactions to confirm
     await new Promise(resolve => setTimeout(resolve, 2000));
 
+    // Verify balances
+    const adminBalance = await provider.connection.getBalance(admin.publicKey);
+    const user1Balance = await provider.connection.getBalance(user1.publicKey);
+    console.log(`✅ Admin funded: ${adminBalance / LAMPORTS_PER_SOL} SOL`);
+    console.log(`✅ User1 funded: ${user1Balance / LAMPORTS_PER_SOL} SOL\n`);
+
+    // Derive PDAs
     [bettingPoolPda] = PublicKey.findProgramAddressSync(
       [Buffer.from("betting_pool"), Buffer.from(STREAM_ID)],
       program.programId
     );
 
-   
     [user1BetPda] = PublicKey.findProgramAddressSync(
       [
         Buffer.from("bet"),
@@ -114,20 +199,19 @@ describe("betting-contract", () => {
       console.log("Initialize transaction signature:", tx);
 
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
-  expect(bettingPool.admin.toString()).to.equal(admin.publicKey.toString());
-  expect(bettingPool.moderator.toString()).to.equal(moderator.publicKey.toString());
+      expect(bettingPool.admin.toString()).to.equal(admin.publicKey.toString());
+      expect(bettingPool.moderator.toString()).to.equal(moderator.publicKey.toString());
       expect(bettingPool.streamId).to.equal(STREAM_ID);
       expect(bettingPool.totalPool.toNumber()).to.equal(0);
       expect(bettingPool.player1Bets.toNumber()).to.equal(0);
       expect(bettingPool.player2Bets.toNumber()).to.equal(0);
       expect(bettingPool.winnerDeclared).to.be.false;
-      expect(bettingPool.creatorFeeRate).to.equal(500); // 5%
+      expect(bettingPool.creatorFeeRate).to.equal(250); // 2.5%
       expect(bettingPool.platformFeeRate).to.equal(250); // 2.5%
       expect(bettingPool.isPayoutComplete).to.be.false;
     });
 
     it("Fails to create pool with non-admin", async () => {
-      // Since anyone can create a pool, let's test that non-admins can't declare winners
       // Create a pool with user1 as admin
       const streamId2 = "test-stream-456";
       const bettingDeadline2 = Math.floor(Date.now() / 1000) + (60 * 60);
@@ -181,7 +265,6 @@ describe("betting-contract", () => {
 
       console.log("User1 bet transaction:", tx);
 
-   
       const bet = await program.account.bet.fetch(user1BetPda);
       expect(bet.user.toString()).to.equal(user1.publicKey.toString());
       expect(bet.amount.toNumber()).to.equal(LAMPORTS_PER_SOL);
@@ -211,7 +294,6 @@ describe("betting-contract", () => {
 
       console.log("User2 bet transaction:", tx);
 
-      
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       expect(bettingPool.totalPool.toNumber()).to.equal(3 * LAMPORTS_PER_SOL);
       expect(bettingPool.player1Bets.toNumber()).to.equal(LAMPORTS_PER_SOL);
@@ -233,7 +315,6 @@ describe("betting-contract", () => {
 
       console.log("User3 bet transaction:", tx);
 
-      // Verify final pool state
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       expect(bettingPool.totalPool.toNumber()).to.equal(3.5 * LAMPORTS_PER_SOL);
       expect(bettingPool.player1Bets.toNumber()).to.equal(1.5 * LAMPORTS_PER_SOL);
@@ -243,7 +324,6 @@ describe("betting-contract", () => {
     });
 
     it("Fails to place bet with invalid prediction", async () => {
-      
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       const currentBetCount = bettingPool.player1BetCount + bettingPool.player2BetCount;
       
@@ -288,7 +368,6 @@ describe("betting-contract", () => {
 
       console.log("Declare winner transaction (admin):", tx);
 
-      // Verify winner declared
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       expect(bettingPool.winnerDeclared).to.be.true;
       expect(bettingPool.winningOutcome).to.equal(1);
@@ -331,7 +410,6 @@ describe("betting-contract", () => {
     it("Pays out User1 (winner with 1 SOL bet)", async () => {
       const initialBalance = await provider.connection.getBalance(user1.publicKey);
       const initialPoolBalance = await provider.connection.getBalance(bettingPoolPda);
-      const initialAdminBalance = await provider.connection.getBalance(admin.publicKey);
 
       const tx = await program.methods
         .payoutWinners()
@@ -348,18 +426,13 @@ describe("betting-contract", () => {
 
       console.log("User1 payout transaction:", tx);
 
-      // Verify bet marked as paid out
       const bet = await program.account.bet.fetch(user1BetPda);
       expect(bet.isPaidOut).to.be.true;
 
-      // Verify balances changed
       const finalBalance = await provider.connection.getBalance(user1.publicKey);
       const finalPoolBalance = await provider.connection.getBalance(bettingPoolPda);
 
-      // User1 should receive more than they originally bet
       expect(finalBalance).to.be.greaterThan(initialBalance);
-      
-      // Pool balance should decrease
       expect(finalPoolBalance).to.be.lessThan(initialPoolBalance);
     });
 
@@ -381,11 +454,9 @@ describe("betting-contract", () => {
 
       console.log("User3 payout transaction:", tx);
 
-      // Verify bet marked as paid out
       const bet = await program.account.bet.fetch(user3BetPda);
       expect(bet.isPaidOut).to.be.true;
 
-      // User3 should receive their proportional share
       const finalBalance = await provider.connection.getBalance(user3.publicKey);
       expect(finalBalance).to.be.greaterThan(initialBalance);
     });
@@ -433,7 +504,6 @@ describe("betting-contract", () => {
 
   describe("Edge Cases", () => {
     it("Cannot place bet after winner declared", async () => {
-      // Fetch current bet count to derive correct PDA
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       const currentBetCount = bettingPool.player1BetCount + bettingPool.player2BetCount;
       
@@ -469,18 +539,19 @@ describe("betting-contract", () => {
     it("Verifies final pool statistics", async () => {
       const bettingPool = await program.account.bettingPool.fetch(bettingPoolPda);
       
-      console.log("Final Pool Statistics:");
-      console.log("- Stream ID:", bettingPool.streamId);
-      console.log("- Total Pool:", bettingPool.totalPool.toNumber() / LAMPORTS_PER_SOL, "SOL");
-      console.log("- Player 1 Bets:", bettingPool.player1Bets.toNumber() / LAMPORTS_PER_SOL, "SOL");
-      console.log("- Player 2 Bets:", bettingPool.player2Bets.toNumber() / LAMPORTS_PER_SOL, "SOL");
-      console.log("- Player 1 Bet Count:", bettingPool.player1BetCount);
-      console.log("- Player 2 Bet Count:", bettingPool.player2BetCount);
-      console.log("- Winner Declared:", bettingPool.winnerDeclared);
-      console.log("- Winning Outcome: Player", bettingPool.winningOutcome);
-      console.log("- Platform Fee Rate:", bettingPool.platformFeeRate / 100, "%");
+      console.log("\n=== Final Pool Statistics ===");
+      console.log("Stream ID:", bettingPool.streamId);
+      console.log("Total Pool:", bettingPool.totalPool.toNumber() / LAMPORTS_PER_SOL, "SOL");
+      console.log("Player 1 Bets:", bettingPool.player1Bets.toNumber() / LAMPORTS_PER_SOL, "SOL");
+      console.log("Player 2 Bets:", bettingPool.player2Bets.toNumber() / LAMPORTS_PER_SOL, "SOL");
+      console.log("Player 1 Bet Count:", bettingPool.player1BetCount);
+      console.log("Player 2 Bet Count:", bettingPool.player2BetCount);
+      console.log("Winner Declared:", bettingPool.winnerDeclared);
+      console.log("Winning Outcome: Player", bettingPool.winningOutcome);
+      console.log("Creator Fee Rate:", bettingPool.creatorFeeRate / 100, "%");
+      console.log("Platform Fee Rate:", bettingPool.platformFeeRate / 100, "%");
+      console.log("=============================\n");
 
-      // Verify the numbers match expectations
       expect(bettingPool.totalPool.toNumber()).to.equal(3.5 * LAMPORTS_PER_SOL);
       expect(bettingPool.player1Bets.toNumber()).to.equal(1.5 * LAMPORTS_PER_SOL);
       expect(bettingPool.player2Bets.toNumber()).to.equal(2 * LAMPORTS_PER_SOL);
@@ -490,5 +561,4 @@ describe("betting-contract", () => {
       expect(bettingPool.winningOutcome).to.equal(1);
     });
   });
-
 });
