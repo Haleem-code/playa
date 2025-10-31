@@ -15,6 +15,7 @@ pub struct BettingPool {
     pub betting_deadline: i64,
     pub creator_fee_rate: u16,
     pub platform_fee_rate: u16,
+    pub platform_treasury: Pubkey,
     pub is_payout_complete: bool,
     pub created_at: i64,
     pub bump: u8,
@@ -36,6 +37,7 @@ impl BettingPool {
         8 + // betting_deadline
         2 + // creator_fee_rate
         2 + // platform_fee_rate
+        32 + // platform_treasury
         1 + // is_payout_complete
         8 + // created_at
         1; // bump
