@@ -47,7 +47,6 @@ pub fn handler(ctx: Context<PayoutWinners>) -> Result<()> {
     let betting_pool_key = ctx.accounts.betting_pool.key();
     let bet_key = ctx.accounts.bet.key();
     let winner_key = ctx.accounts.winner.key();
-    let platform_treasury_key = ctx.accounts.platform_treasury.key();
     
   
     if !ctx.accounts.betting_pool.winner_declared {
@@ -70,9 +69,6 @@ pub fn handler(ctx: Context<PayoutWinners>) -> Result<()> {
     }
     
    
-    if ctx.accounts.betting_pool.admin != platform_treasury_key {
-        return Err(BettingError::UnauthorizedAdmin.into());
-    }
     
     let total_winning_bets = if ctx.accounts.betting_pool.winning_outcome == 1 {
         ctx.accounts.betting_pool.player1_bets
