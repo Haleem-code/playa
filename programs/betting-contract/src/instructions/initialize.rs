@@ -3,7 +3,7 @@ use crate::state::*;
 use crate::error::BettingError;
 
 #[derive(Accounts)]
-#[instruction(stream_id: String, betting_deadline: i64, moderator_pubkey: Pubkey)]
+#[instruction(stream_id: String, betting_deadline: i64, moderator_pubkey: Pubkey,  platform_treasury: Pubkey)]
 pub struct Initialize<'info> {
     #[account(
         init,
@@ -15,11 +15,18 @@ pub struct Initialize<'info> {
     pub betting_pool: Account<'info, BettingPool>,
     #[account(mut)]
     pub admin: Signer<'info>,
-    /// The moderator is not required as a signer, just passed as a pubkey argument
+    /// CHECK: Platform treasury can be any address
+    pub platform_treasury: UncheckedAccount<'info>,
     pub system_program: Program<'info, System>,
 }
 
-pub fn handler(ctx: Context<Initialize>, stream_id: String, betting_deadline: i64, moderator_pubkey: Pubkey) -> Result<()> {
+pub fn handler(
+    ctx: Context<Initialize>,
+    stream_id: String,
+    betting_deadline: i64,
+    moderator_pubkey: Pubkey,
+    platform_treasury: Pubkey,
+) -> Result<()> {
     // Validate stream ID length
     if stream_id.len() > 32 {
         return Err(BettingError::StreamIdTooLong.into());
@@ -39,6 +46,7 @@ pub fn handler(ctx: Context<Initialize>, stream_id: String, betting_deadline: i6
     
     // Initialize betting pool with your specifications
     betting_pool.admin = admin_key;
+
     betting_pool.moderator = moderator_pubkey;
     betting_pool.stream_id = stream_id.clone();
     betting_pool.total_pool = 0;
@@ -48,16 +56,10 @@ pub fn handler(ctx: Context<Initialize>, stream_id: String, betting_deadline: i6
     betting_pool.player2_bet_count = 0;
     betting_pool.winner_declared = false;
     betting_pool.winning_outcome = 0; // 0 means not set yet
-    
-    // Set custom betting deadline from user input
     betting_pool.betting_deadline = betting_deadline;
-    
-    // Set creator fee to 2.5% (250 basis points)
-    betting_pool.creator_fee_rate = 250;
-    
-    // Set platform fee to 2.5% (250 basis points)
+    betting_pool.creator_fee_rate = 500;
     betting_pool.platform_fee_rate = 250;
-    
+    betting_pool.platform_treasury = platform_treasury;
     betting_pool.is_payout_complete = false;
     betting_pool.created_at = clock.unix_timestamp;
     betting_pool.bump = ctx.bumps.betting_pool;
